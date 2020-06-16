@@ -1,0 +1,30 @@
+{% extends "picture_displayer/base.html" %}
+
+{% block content %}
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);         
+            transition: 0.3s;
+            margin: auto;
+            width: max-content;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+    </style>
+        <h1>An image</h1>
+        <div class="card">
+            <img src="media/{{ image.image }}"alt="Avatar">
+            <div class="container">
+                <h1>media/{{image.image}}</h1>
+                <h4><b>{{image.name}}</b></h1>
+                    <h2><a type="button" href="{% url 'Pictures_Home' %}">Back</a></h2>  
+                    <h2><a type="button" href="{% url 'delete_image' image.id %}">Delete Image</a></h2>
+            </div>
+        </div>
+{% endblock content%}

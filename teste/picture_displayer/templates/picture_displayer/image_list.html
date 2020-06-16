@@ -1,0 +1,35 @@
+{% extends "picture_displayer/base.html" %}
+
+{% block content %}
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);         
+            transition: 0.3s;
+            margin: auto;
+            width: 25%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+        .image {
+            width: 100%;
+        }
+    </style>
+
+        <h1>Listing all the images...</h1>
+        <h2><a type="button" href="{% url 'Add_picture' %}">Add Image</a></h2>
+        {% for image in images %}
+        <div class="card">
+            <img src=media/{{image.image}} alt="Avatar" class="image">
+            <div class="container">
+                <h4><b>media/{{image.image}}</b></h1>
+               <h2><a type="button" href="{% url 'view_image' image.id %}">See Image</a></h2> 
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content%}
