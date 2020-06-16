@@ -1,7 +1,7 @@
 # neonume_test
 
 <h1>What is it</h1>
-<p>This is a teste requestes by the company neonumy as a skill assessment for a Junior Backend python developer</p>
+<p>This is a test requested by the company neonumy as a skill assessment for a Junior Backend python developer</p>
 
 <h1>How to run</h1>
 
