@@ -1,4 +1,4 @@
-# neonume_test
+# neonumy_test
 
 <h1>What is it</h1>
 <p>This is a test requested by the company neonumy as a skill assessment for a Junior Backend python developer</p>
